@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import VideoFooter from './components/footer/VideoFooter';
+import VideoSiderbar from './components/sidebar/VideoSiderbar';
 import "./video.css";
 
-function Video() {
+function Video({likes, messages, shares, name, description, music, url}) {
     const videoRef = useRef(null);
     const [play, setPlay] = useState(false);
 
@@ -23,10 +24,19 @@ function Video() {
             ref={videoRef}
             onClick={handdlestart}
             loop
-            src="https://cdn.discordapp.com/attachments/1090791451383832711/1090802987225595964/Snapinsta.app_video_329238296_643045674488277_8890415696715888239_n.mp4">
+            src={url}>
         </video>
-        {/* Side bar */}
-        <VideoFooter />
+        <VideoSiderbar 
+            likes={likes}
+            messages={messages}
+            shares={shares}
+        />
+        <VideoFooter 
+            name={name}
+            description={description}
+            music={music}
+
+        />
     </div>
   );
 }
