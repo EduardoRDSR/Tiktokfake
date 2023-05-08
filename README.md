@@ -1,4 +1,4 @@
-### https://tiktokfake-62c83.web.app
+### Acesso ao APP:https://tiktokfake-62c83.web.app
 
 # Getting Started with Create React App
 
